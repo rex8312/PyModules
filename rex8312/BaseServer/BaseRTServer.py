@@ -18,11 +18,9 @@ from tornado import gen
 from tornado.options import define
 from tornado.options import options
 from tornado.options import parse_command_line
-from MessageBuffer import MessageBuffer
 
 define('port', default=8888, help='run on the given port', type=int)
 define('debug', default=False, help='run in debug mode')
-global_message_buffer = MessageBuffer()
 
 
 class BaseHandler(tornado.web.RequestHandler):
