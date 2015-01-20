@@ -12,6 +12,7 @@ if __name__ == '__main__':
             data = raw_input()
             ws.send(json.dumps({'body': '{}'.format(data)}))
             result = ws.recv()
+            result = json.loads(result)
             print result['body']
     except KeyboardInterrupt:
         ws.close()

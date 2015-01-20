@@ -80,13 +80,13 @@ class ChatSocketHandler(tornado.websocket.WebSocketHandler):
 
 
 class Application(tornado.web.Application):
-    def __init__(self):
+    def __init__(self, cookie_secret="__TODO:_GENERATE_YOUR_OWN_RANDOM_VALUE_HERE__"):
         handlers = [
             (r"/", MainHandler),
             (r"/chatsocket", ChatSocketHandler),
         ]
         settings = dict(
-            cookie_secret="__TODO:_GENERATE_YOUR_OWN_RANDOM_VALUE_HERE__",
+            cookie_secret=cookie_secret,
             #login_url='/auth/login',
             #template_path=os.path.join(os.path.dirname(__file__), "templates"),
             #static_path=os.path.join(os.path.dirname(__file__), "static"),
