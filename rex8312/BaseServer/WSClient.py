@@ -1,6 +1,12 @@
 __author__ = 'rex8312'
 
-import websocket  # pip install websocket-client
+"""
+websocket을 이용한 간단한 클라이언트
+python의 websocket 클라이언트 이용
+# pip install websocket-client
+"""
+
+import websocket
 import json
 
 if __name__ == '__main__':

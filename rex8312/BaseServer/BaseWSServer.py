@@ -2,6 +2,10 @@
 
 __author__ = 'rex8312'
 
+"""
+websocket을 이용한 간단한 서버, tornado의 예제
+"""
+
 
 import logging
 import tornado.auth
